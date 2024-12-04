@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://cdvlmvjx4pla8"]
+
+[ext_resource type="Script" path="res://Szenes/spells.gd" id="1_l8wk6"]
+[ext_resource type="Texture2D" uid="uid://dca6qpwai6iye" path="res://magic_fire.png" id="2_krwg0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_64khw"]
+radius = 4.0
+
+[node name="Spells" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_l8wk6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_64khw")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("2_krwg0")

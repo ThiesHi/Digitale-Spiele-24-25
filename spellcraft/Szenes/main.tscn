@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c663vi56m3srf"]
+
+[ext_resource type="PackedScene" uid="uid://b1p402jtx3m4u" path="res://Szenes/player.tscn" id="2_uixaf"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_0amxo"]
+
+[node name="Main" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -25.0
+offset_top = -45.0
+offset_right = 487.0
+offset_bottom = 467.0
+texture = SubResource("NoiseTexture2D_0amxo")
+
+[node name="Player" parent="." instance=ExtResource("2_uixaf")]

@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://d37lyioau801l"]
+
+[ext_resource type="Script" path="res://Scripts/spell_input.gd" id="1_rwt3l"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_24hfh"]
+
+[node name="Spell_input" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="spell_input" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.513
+anchor_top = 0.498
+anchor_right = 0.513
+anchor_bottom = 0.498
+offset_left = -327.976
+offset_top = -307.704
+offset_right = 296.024
+offset_bottom = 316.296
+texture = SubResource("CanvasTexture_24hfh")
+expand_mode = 3
+script = ExtResource("1_rwt3l")
+
+[node name="close_and_save" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="ready" from="spell_input" to="spell_input" method="_on_ready"]
